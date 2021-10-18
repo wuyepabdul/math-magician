@@ -1,19 +1,20 @@
-# JavaScript Capstone
+# Math Magician
 
-JavaScript Capstone is a meal website that displays list of various meals and their details which are fetched from an external API. It is built with CSS and JavaScript.
+"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+- Make simple calculations.
+- Read a random math-related quote.
+
+
 
 ## Screenshots
 
-<img src="./src/images/meal1.png">
+<img src="./src/images/calculator1.png">
 
-<img src="./src/images/meal2.png">
 
 ## Live Demo
 
 [Live Demo Link](https://wuyepabdul.github.io/javascript-capstone/)
 
-## Video Presentation
-[Watch video here ](https://youtu.be/KWPftebBs4Q)
 
 ## Built With
 
@@ -23,7 +24,7 @@ JavaScript Capstone is a meal website that displays list of various meals and th
 ## Getting Started
 
 **To clone this project**
-**Run command: $git clone https://github.com/wuyepabdul/javascript-capstone.git**
+**Run command: $git clone https://github.com/wuyepabdul/math-magician.git**
 **or press the green Code button in the upper right corner and choose to download from the Download ZIP link.**
 
 ### Prerequisites
@@ -45,7 +46,7 @@ npm run test
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/wuyepabdul/javascript-capstone/issues).
+Feel free to check the [issues page](https://github.com/wuyepabdul/math-magician.git/issues).
 
 ## Show your support
 
@@ -54,8 +55,6 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Microverse
-- Meals DB API
-- Involvement API
 
 ## 📝 License
 
