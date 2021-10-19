@@ -4,6 +4,10 @@
 /node_modules
 /.pnp
 .pnp.js
+coverage
+.hintrc
+.styelintrc.json
+.eslintrc.json
 
 # testing
 /coverage

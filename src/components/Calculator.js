@@ -18,9 +18,9 @@ export default class Calculator extends Component {
         <div className="light-grey">5</div>
         <div className="light-grey">6</div>
         <div className="orange">-</div>
-        <div className="light-grey">3</div>
-        <div className="light-grey">2</div>
         <div className="light-grey">1</div>
+        <div className="light-grey">2</div>
+        <div className="light-grey">3</div>
         <div className="orange">+</div>
         <div className="light-grey zero">0</div>
         <div className="light-grey">.</div>
