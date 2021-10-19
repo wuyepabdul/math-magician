@@ -3,28 +3,25 @@ import React, { Component } from 'react';
 
 export default class Calculator extends Component {
   render() {
+    const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+    const iterator = 0;
+    const btnClass = (className) => {
+      // ;
+      if (className === '÷' || className === 'x' || className === '-' || className === '+' || className === '=') {
+        return 'orange';
+      } if (className === '0') { return 'light-grey zero'; }
+      return 'light-grey';
+    };
     return (
       <div className="calculator">
         <div className="header">0</div>
-        <div className="light-grey">AC</div>
-        <div className="light-grey">+/-</div>
-        <div className="light-grey">%</div>
-        <div className="orange"><span>&#247;</span></div>
-        <div className="light-grey">7</div>
-        <div className="light-grey">8</div>
-        <div className="light-grey">9</div>
-        <div className="orange">x</div>
-        <div className="light-grey">4</div>
-        <div className="light-grey">5</div>
-        <div className="light-grey">6</div>
-        <div className="orange">-</div>
-        <div className="light-grey">1</div>
-        <div className="light-grey">2</div>
-        <div className="light-grey">3</div>
-        <div className="orange">+</div>
-        <div className="light-grey zero">0</div>
-        <div className="light-grey">.</div>
-        <div className="orange">=</div>
+        {buttons.map((btn) => (
+          <div key={iterator + 1} className={btnClass(btn)}>
+            {' '}
+            {btn}
+            {' '}
+          </div>
+        ))}
       </div>
     );
   }
