@@ -13,7 +13,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://wuyepabdul.github.io/javascript-capstone/)
+[Live Demo Link](https://wuyepabdul.github.io/math-magician/)
 
 
 ## Built With
