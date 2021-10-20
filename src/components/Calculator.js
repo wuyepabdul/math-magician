@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
@@ -11,6 +9,10 @@ const Calculator = () => {
   const runCalculator = (btn) => {
     const newObj = calculate(state, btn);
     setState(newObj);
+  };
+
+  const handleKeyDown = (btn) => {
+    runCalculator(btn);
   };
 
   const displayResult = () => {
@@ -39,11 +41,17 @@ const Calculator = () => {
     <div className="calculator">
       <div className="header">{displayResult() }</div>
       {buttons.map((btn) => (
-        <div key={btn} className={generateBtnClass(btn)} onClick={() => runCalculator(btn)}>
+        <button
+          type="button"
+          key={btn}
+          className={generateBtnClass(btn)}
+          onClick={() => runCalculator(btn)}
+          onKeyDown={(e) => { if (e.key === 'Enter')handleKeyDown(btn); }}
+        >
           {' '}
           {btn}
           {' '}
-        </div>
+        </button>
       ))}
     </div>
   );
