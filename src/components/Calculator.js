@@ -1,31 +1,60 @@
-/* eslint-disable react/prefer-stateless-function */
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 
-export default class Calculator extends Component {
-  render() {
-    return (
-      <div className="calculator">
-        <div className="header">0</div>
-        <div className="light-grey">AC</div>
-        <div className="light-grey">+/-</div>
-        <div className="light-grey">%</div>
-        <div className="orange"><span>&#247;</span></div>
-        <div className="light-grey">7</div>
-        <div className="light-grey">8</div>
-        <div className="light-grey">9</div>
-        <div className="orange">x</div>
-        <div className="light-grey">4</div>
-        <div className="light-grey">5</div>
-        <div className="light-grey">6</div>
-        <div className="orange">-</div>
-        <div className="light-grey">1</div>
-        <div className="light-grey">2</div>
-        <div className="light-grey">3</div>
-        <div className="orange">+</div>
-        <div className="light-grey zero">0</div>
-        <div className="light-grey">.</div>
-        <div className="orange">=</div>
-      </div>
-    );
-  }
-}
+const Calculator = () => {
+  const [state, setState] = useState({ total: null, next: null, operation: null });
+
+  const buttons = ['AC', '+/-', '%', '÷', '7', '8', '9', 'x', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', '='];
+
+  const runCalculator = (btn) => {
+    const newObj = calculate(state, btn);
+    setState(newObj);
+  };
+
+  const handleKeyDown = (btn) => {
+    runCalculator(btn);
+  };
+
+  const displayResult = () => {
+    const { next, total, operation } = state;
+    const op = operation === '%' ? 'mod' : operation;
+    let result = '';
+    if (total) {
+      result = `${total} ${op || ''} ${next || ''}`;
+      return result;
+    } if (next) {
+      result = `${next} ${op || ''}`;
+      return result;
+    }
+    return 0;
+  };
+
+  const generateBtnClass = (className) => {
+    if (className === '÷' || className === 'x' || className === '-'
+    || className === '+' || className === '=') {
+      return 'orange';
+    } if (className === '0') { return 'light-grey zero'; }
+    return 'light-grey';
+  };
+
+  return (
+    <div className="calculator">
+      <div className="header">{displayResult() }</div>
+      {buttons.map((btn) => (
+        <button
+          type="button"
+          key={btn}
+          className={generateBtnClass(btn)}
+          onClick={() => runCalculator(btn)}
+          onKeyDown={(e) => { if (e.key === 'Enter')handleKeyDown(btn); }}
+        >
+          {' '}
+          {btn}
+          {' '}
+        </button>
+      ))}
+    </div>
+  );
+};
+
+export default Calculator;
