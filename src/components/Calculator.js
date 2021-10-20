@@ -12,19 +12,6 @@ const Calculator = () => {
     setState(newObj);
   };
 
-  const displayResult = () => {
-    const { next, total, operation } = state;
-    const op = operation === '%' ? 'mod' : operation;
-    let result = '';
-    if (total) {
-      result = `${total} ${op || ''} ${next || ''}`;
-      return result;
-    } if (next) {
-      result = `${next} ${op || ''}`;
-      return result;
-    }
-    return 0;
-  };
   const generateBtnClass = (className) => {
     if (className === '÷' || className === 'x' || className === '-'
     || className === '+' || className === '=') {
