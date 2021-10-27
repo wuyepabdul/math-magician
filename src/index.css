@@ -16,12 +16,18 @@
 .nav-links {
   display: flex;
   list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  font-size: 50px;
 }
 
 .nav-links li {
-  margin-left: 15px;
   border-right: 1px solid grey;
-  padding: 5px;
+  padding: 5px 10px;
+  font-size: 20px;
 }
 
 .nav-links li:last-child {
@@ -35,6 +41,10 @@
 
 a {
   text-decoration: none;
+}
+
+.home-heading {
+  margin: 30px 0;
 }
 
 .calculator {
@@ -72,4 +82,13 @@ a {
   background: orange;
   padding: 20px 0;
   border: 1px solid rgb(192, 190, 190);
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  padding-left: 40px;
+  font-size: 30px;
 }

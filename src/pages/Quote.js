@@ -1,8 +1,13 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 const Quote = () => (
-  <div>
-    quote
+  <div className="quote">
+    <p>
+      Mathematics is not about numbers, equations, computations or algorithms: it is about understanding -
+      {' '}
+      <q>William Paul Thurston</q>
+    </p>
   </div>
 );
 
