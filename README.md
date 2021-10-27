@@ -8,7 +8,11 @@
 
 ## Screenshots
 
-<img src="./src/images/calculator1.png">
+<img src="./src/images/math1.png">
+
+<img src="./src/images/math2.png">
+
+<img src="./src/images/math3.png">
 
 
 ## Live Demo
@@ -20,6 +24,7 @@
 
 - CSS
 - JS
+- React
 
 ## Getting Started
 
