@@ -4,6 +4,39 @@
   margin: 0;
 }
 
+.container {
+  padding: 20px 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 15px;
+  border-right: 1px solid grey;
+  padding: 5px;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+.active-link {
+  color: rgb(235, 154, 5);
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .calculator {
   width: 50%;
   height: 100vh;
