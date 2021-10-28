@@ -35,4 +35,8 @@ describe('Home', () => {
     expect(element).toHaveClass('home');
     expect(headerElement).toHaveClass('home-heading');
   });
+  test('To match snapshot', () => {
+    const component = render(<Home />);
+    expect(component).toMatchSnapshot();
+  });
 });
