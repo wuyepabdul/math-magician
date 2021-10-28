@@ -29,11 +29,14 @@ const Calculator = () => {
   };
 
   return (
-    <Buttons
-      displayResult={displayResult}
-      runCalculator={runCalculator}
-      handleKeyDown={handleKeyDown}
-    />
+    <>
+      {console.log(state)}
+      <Buttons
+        displayResult={displayResult}
+        runCalculator={runCalculator}
+        handleKeyDown={handleKeyDown}
+      />
+    </>
   );
 };
 
