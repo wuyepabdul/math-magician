@@ -30,7 +30,6 @@ const Calculator = () => {
 
   return (
     <>
-      {console.log(state)}
       <Buttons
         displayResult={displayResult}
         runCalculator={runCalculator}
