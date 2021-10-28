@@ -7,18 +7,32 @@ describe('Home', () => {
     cleanup();
   });
 
-  test('Displays Welcome to our page!', () => {
+  test('Renders Welcome to our page!', () => {
     render(<Home />);
-    screen.debug();
     const headerElement = screen.getByText(/Welcome to our page!/);
     expect(headerElement).toBeInTheDocument();
     expect(screen.getByRole('heading'));
   });
-  test('Displays p tag contents', () => {
+  test('Renders div tag', () => {
     render(<Home />);
-    const element = screen.getByText(/Welcome to our page!/);
+    const element = screen.getByTestId('home-div');
+    const pTag = screen.getByTestId('p-tag');
     expect(element).toBeInTheDocument();
-    expect(screen.getByRole('heading'));
-    console.log(screen);
+    expect(element).toHaveTextContent('Welcome to our page!');
+    expect(element).toContainElement(pTag);
+  });
+  test('Renders p tags', () => {
+    render(<Home />);
+    const element = screen.getByTestId('p-tag');
+    expect(element).toBeInTheDocument();
+    expect(element).toContainHTML('<br />');
+    expect(element).not.toContainHTML('<div></div>');
+  });
+  test('To have classNames', () => {
+    render(<Home />);
+    const element = screen.getByTestId('home-div');
+    const headerElement = screen.getByText(/Welcome to our page!/);
+    expect(element).toHaveClass('home');
+    expect(headerElement).toHaveClass('home-heading');
   });
 });
