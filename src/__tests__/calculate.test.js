@@ -13,7 +13,7 @@ describe('Calculate Function', () => {
     const result = calculate(obj, button);
     expect(Number(result.total)).toEqual(2);
   });
-  test('Return zero if button is equal to AC', () => {
+  test('Return zero if button is equal to "AC"', () => {
     const obj = { total: '1', next: '1', operation: '+' };
     const button = 'AC';
     const result = calculate(obj, button);
