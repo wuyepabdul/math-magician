@@ -13,7 +13,7 @@ describe('Quote', () => {
     expect(container.firstChild.textContent).toEqual('Mathematics is not about numbers, equations, computations or algorithms: it is about understanding - William Paul Thurston');
   });
   test('snapshot of quotepage', () => {
-    const calculatorComponent = render(<Quote />);
-    expect(calculatorComponent).toMatchSnapshot();
+    const quoteComponent = render(<Quote />);
+    expect(quoteComponent).toMatchSnapshot();
   });
 });
