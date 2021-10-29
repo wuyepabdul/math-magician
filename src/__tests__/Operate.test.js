@@ -30,4 +30,8 @@ describe('Operate Function', () => {
     const result = operate('0', '7', '÷');
     expect(result).toBe('0');
   });
+  test('Return Invalid operation for (number % 0) ', () => {
+    const result = operate('7', '0', '%');
+    expect(result).toBe('Invalid operation.');
+  });
 });
