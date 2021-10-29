@@ -18,7 +18,6 @@ describe('AppRouting and Navbar', () => {
   });
   test('home default', () => {
     render(<App />);
-    // default
     const homeDefault = screen.getByTestId('home-div');
     expect(homeDefault).toBeInTheDocument();
     expect(homeDefault.firstChild.textContent).toEqual('Welcome to our page!');
