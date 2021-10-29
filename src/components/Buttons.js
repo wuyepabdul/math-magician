@@ -14,8 +14,8 @@ const Buttons = ({
     return 'light-grey';
   };
   return (
-    <div className="calculator">
-      <div className="header">{displayResult() }</div>
+    <div data-testid="calculator-container" className="calculator">
+      <div data-testid="calculator-display" className="header">{displayResult() }</div>
       {buttons.map((btn) => (
         <button
           type="button"

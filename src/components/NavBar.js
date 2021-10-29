@@ -8,7 +8,7 @@ const NavBar = () => {
     { id: 3, title: 'Quote', path: '/quote' },
   ];
   return (
-    <nav className="nav">
+    <nav data-testid="navbar" className="nav">
       <h1 className="logo">
         {' '}
         <NavLink to="/">Math Magicians</NavLink>
