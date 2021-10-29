@@ -6,7 +6,7 @@ describe('Quote', () => {
   afterEach(() => {
     cleanup();
   });
-  test('Render the calculator page', () => {
+  test('Render the quote page', () => {
     render(<Quote />);
     const container = screen.getByTestId('quote-container');
     expect(container).toBeInTheDocument();

@@ -13,9 +13,11 @@ Object {
         </h1>
         <div
           class="calculator"
+          data-testid="calculator-container"
         >
           <div
             class="header"
+            data-testid="calculator-display"
           >
             0
           </div>
@@ -184,9 +186,11 @@ Object {
       </h1>
       <div
         class="calculator"
+        data-testid="calculator-container"
       >
         <div
           class="header"
+          data-testid="calculator-display"
         >
           0
         </div>
