@@ -1,7 +1,7 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
-import NavBar from './components/NavBar';
 import CalculatorPage from './pages/CalculatorPage';
+import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Quote from './pages/Quote';
 
