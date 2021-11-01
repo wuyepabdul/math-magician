@@ -17,9 +17,7 @@ const App = () => (
         <Route path="/quote">
           <Quote />
         </Route>
-
       </Switch>
-
     </div>
   </Router>
 );
