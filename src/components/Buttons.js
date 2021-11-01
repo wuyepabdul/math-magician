@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Buttons = ({ runCalculator, displayResult, handleKeyDown }) => {
   const buttons = [
@@ -61,6 +61,12 @@ const Buttons = ({ runCalculator, displayResult, handleKeyDown }) => {
       ))}
     </div>
   );
+};
+
+Buttons.propTypes = {
+  runCalculator: PropTypes.func.isRequired,
+  displayResult: PropTypes.func.isRequired,
+  handleKeyDown: PropTypes.func.isRequired,
 };
 
 export default Buttons;
