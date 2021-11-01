@@ -3,7 +3,11 @@ import calculate from '../logic/calculate';
 import Buttons from './Buttons';
 
 const Calculator = () => {
-  const [state, setState] = useState({ total: null, next: null, operation: null });
+  const [state, setState] = useState({
+    total: null,
+    next: null,
+    operation: null,
+  });
 
   const runCalculator = (btn) => {
     const newObj = calculate(state, btn);
@@ -21,7 +25,8 @@ const Calculator = () => {
     if (total) {
       result = `${total} ${op || ''} ${next || ''}`;
       return result;
-    } if (next) {
+    }
+    if (next) {
       result = `${next} ${op || ''}`;
       return result;
     }
