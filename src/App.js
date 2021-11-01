@@ -1,14 +1,14 @@
 import React from 'react';
 import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import CalculatorPage from './pages/CalculatorPage';
-// import NavBar from './components/NavBar';
+import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Quote from './pages/Quote';
 
 const App = () => (
   <Router>
     <div className="container">
-      {/* <NavBar /> */}
+      <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/calculator">
